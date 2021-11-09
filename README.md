@@ -17,7 +17,7 @@ These are the key steps to forward any external requests from a designated port,
 
 1.  Look for the KUBE-SVC-XXX NAT chain that kube-proxy uses to redirect the traffic bound for the load balancing VIP. Take note of the chain, KUBE-FW-PZQRGVAATKDHB3IH, afterward.
 
-    controlplane $ iptables -t nat -L -n --line-numbers | grep 172.17.0.108
+    controlplane $ iptables -t nat -L -n --line-numbers | grep 172.17.0.100
     3    KUBE-FW-PZQRGVAATKDHB3IH  tcp  --  0.0.0.0/0            172.17.0.100         /* default/hellotherebye4now-service:http loadbalancer IP*/ tcp dpt:80
 
 2.  Insert a new nat rule at the top of the PREROUTING chain by "latching on to" to the above kube-proxy chain, KUBE-FW-PZQRGVAATKDHB3IH:

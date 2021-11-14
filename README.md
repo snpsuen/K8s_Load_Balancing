@@ -14,7 +14,7 @@ kubernetes   ClusterIP   10.96.0.1       <none>        443/TCP   4m8s
 quickweb     ClusterIP   10.110.189.12   <none>        80/TCP    87s
 controlplane $
 
-2.  The Cluster-IP service is handled by the KUBE-SVC-F5B3UGH2MHZEGIUL sub-chain.
+2.  The Cluster-IP service is handled by kube-proxy through the KUBE-SVC-F5B3UGH2MHZEGIUL sub-chain.
 
 controlplane $ iptables -t nat -L | grep -i KUBE-SVC | grep 10.110.189.12
 KUBE-SVC-F5B3UGH2MHZEGIUL  tcp  --  anywhere             10.110.189.12        /* default/quickweb: cluster IP */ tcp dpt:http

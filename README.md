@@ -48,6 +48,7 @@ controlplane $
 
 5. Voila! The same Cluster-IP service is now accessible to an external node via the VIP URL.
 
+<pre>
 external-node $ curl http://192.168.25.100
 <!DOCTYPE html>
 <html>
@@ -73,7 +74,9 @@ Commercial support is available at
 </body>
 </html>
 external-node $ 
+</pre>
 
+---
 This is a handy little trick that allows you to port forward traffic to a LoadBalancer typed service running in a Kubernetes playground on Katacoda.
 Suppose the load balancer service, hellotherebye4now-service, is deployed on the K8s cluster as follows.
 

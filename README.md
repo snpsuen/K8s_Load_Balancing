@@ -114,8 +114,8 @@ Now there you are. The LoadBalancer service is ready to be accessed via controll
     >   curl http://172.17.0.20:50080 2>/dev/null | grep -i hostname
     >   sleep 1
     > done
-        My hostname is hellothere-deployment-557747b986-qtlw9
-        My hostname is bye4now-deployment-7bc6b8bc9d-dgfd5
+        <h4> My hostname is hellothere-deployment-557747b986-qtlw9 </h4>
+        <h4> My hostname is bye4now-deployment-7bc6b8bc9d-dgfd5 </h4>
     ^C
     node01 $
 

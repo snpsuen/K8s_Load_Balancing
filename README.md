@@ -1,5 +1,5 @@
 <pre>
-Actually, we can do one better by latching on directly to the KUBE-SVC chain for a Cluster-IP service
+Actually, we can do one better by latching on directly to the KUBE-SVC chain for a Cluster-IP service.
 
 1. Suppose quick-web is deployed only as a Cluster-IP type service to start with.
 
@@ -60,7 +60,7 @@ font-family: Tahoma, Verdana, Arial, sans-serif; }
 </style>
 </head>
 <body>
-Welcome to nginx!
+<h3>Welcome to nginx!</h3>
 <p>If you see this page, the nginx web server is successfully installed and
 working. Further configuration is required.</p>
 

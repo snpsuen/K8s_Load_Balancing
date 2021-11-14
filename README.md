@@ -19,7 +19,7 @@ controlplane $
 controlplane $ iptables -t nat -L | grep -i KUBE-SVC | grep 10.110.189.12
 KUBE-SVC-F5B3UGH2MHZEGIUL  tcp  --  anywhere             10.110.189.12        /* default/quickweb: cluster IP */ tcp dpt:http
 
-3. Install ECMP routes towards a publicly accessible load balancing VIP via the K8s nodes. The routes are installed on the last hop router in front of the K8s cluster. Assume the route is running Linux in this example.
+3. Install ECMP routes towards a publicly accessible load balancing VIP via the K8s nodes. The routes are installed on the last hop router in front of the K8s cluster. Assume the router is running Linux in this example.
 
 k8s-router $ ip route add 192.168.25.100/32 \
 > nexthop via 172.17.0.26 weight 10

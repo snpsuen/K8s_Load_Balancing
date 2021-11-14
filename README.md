@@ -48,7 +48,6 @@ controlplane $
 
 5. Voila! The same Cluster-IP service is now accessible to an external node via the VIP URL.
 
-<pre>
 external-node $ curl http://192.168.25.100
 <!DOCTYPE html>
 <html>
@@ -61,7 +60,7 @@ font-family: Tahoma, Verdana, Arial, sans-serif; }
 </style>
 </head>
 <body>
-<h1>Welcome to nginx!</h1>
+Welcome to nginx!
 <p>If you see this page, the nginx web server is successfully installed and
 working. Further configuration is required.</p>
 
@@ -74,7 +73,6 @@ Commercial support is available at
 </body>
 </html>
 external-node $ 
-</pre>
 
 ---
 This is a handy little trick that allows you to port forward traffic to a LoadBalancer typed service running in a Kubernetes playground on Katacoda.
